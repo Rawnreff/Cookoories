@@ -40,6 +40,33 @@
                 </a>
             </li>
 
+            <li class="nav-item">
+                <a href="{{ route('admin.recipes.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Recipe') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.categories.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Category') }}
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('admin.posts.index') }}" class="nav-link">
+                    <i class="nav-icon fa fa-book"></i>
+                    <p>
+                        {{ __('Post') }}
+                    </p>
+                </a>
+            </li>
+
         </ul>
     </nav>
     <!-- /.sidebar-menu -->
