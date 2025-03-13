@@ -7,7 +7,7 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('edit category')}}</h1>
+                    <h1 class="h3 mb-0 text-gray-800">{{ __('Edit Category')}}</h1>
                     <a href="{{ route('admin.categories.index') }}" class="btn btn-success btn-sm shadow-sm">{{ __('Go Back') }}</a>
                 </div>
             </div>
@@ -16,8 +16,8 @@
                     @csrf
                     @method('put')
                     <div class="form-group">
-                        <label for="title">{{ __('title') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('title') }}" name="title" value="{{ old('title', $category->title) }}" />
+                        <label for="title">{{ __('Category Title') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Category Title') }}" name="title" value="{{ old('title', $category->title) }}" />
                     </div>
                     <button type="submit" class="btn btn-success">{{ __('Save')}}</button>
                 </form>

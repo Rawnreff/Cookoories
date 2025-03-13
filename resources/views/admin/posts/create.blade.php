@@ -5,7 +5,7 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('create post') }}</h1>
+                    <h1 class="h3 mb-0 text-gray-800">{{ __('Create Post') }}</h1>
                     <a href="{{ route('admin.posts.index') }}" class="btn btn-success btn-sm shadow-sm">{{ __('Go Back') }}</a>
                 </div>
             </div>
@@ -13,7 +13,7 @@
                 <form action="{{ route('admin.posts.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="category_id">{{ __('category_id') }}</label>
+                        <label for="category_id">{{ __('Category') }}</label>
                         <select class="form-control" name="category_id" id="category_id">
                             @foreach($categories as $category)
                                 <option value="{{ $category->id }}">{{ $category->title }}</option>
@@ -21,23 +21,23 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="title">{{ __('title') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('title') }}" name="title" value="{{ old('title') }}" />
+                        <label for="title">{{ __('Post Title') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Post Title') }}" name="title" value="{{ old('title') }}" />
                     </div>
                     <div class="form-group">
-                        <label for="excerpt">{{ __('excerpt') }}</label>
+                        <label for="excerpt">{{ __('Excerpt') }}</label>
                         <textarea name="excerpt" id="excerpt" class="form-control" cols="30" rows="10">{{ old('excerpt') }}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="description">{{ __('description') }}</label>
+                        <label for="description">{{ __('Description') }}</label>
                         <textarea name="description" id="description" class="form-control" cols="30" rows="10">{{ old('description') }}</textarea>
                     </div>
                     <div class="form-group">
-                        <label for="banner">{{ __('banner') }}</label>
-                        <input type="file" class="form-control" id="banner" placeholder="{{ __('banner') }}" name="banner" value="{{ old('banner') }}" />
+                        <label for="banner">{{ __('Banner Image') }}</label>
+                        <input type="file" class="form-control" id="banner" placeholder="{{ __('Banner Image') }}" name="banner" value="{{ old('banner') }}" />
                     </div>
                     <div class="form-group">
-                        <label for="status">{{ __('status') }}</label>
+                        <label for="status">{{ __('Status') }}</label>
                         <select class="form-control" name="status" id="status">
                             <option value="1">Active</option>
                             <option value="0">InActive</option>

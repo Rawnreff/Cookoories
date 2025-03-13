@@ -26,7 +26,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>{{ __('Title') }}</th>
+                                <th>{{ __('Category Title') }}</th>
                                 <th>{{ __('Action') }}</th>
                             </tr>
                         </thead>

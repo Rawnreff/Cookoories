@@ -7,7 +7,7 @@
         <div class="card shadow">
             <div class="card-header">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">{{ __('edit recipe')}}</h1>
+                    <h1 class="h3 mb-0 text-gray-800">{{ __('Edit Recipe')}}</h1>
                     <a href="{{ route('admin.recipes.index') }}" class="btn btn-success btn-sm shadow-sm">{{ __('Go Back') }}</a>
                 </div>
             </div>
@@ -16,19 +16,19 @@
                     @csrf
                     @method('put')
                     <div class="form-group">
-                        <label for="title">{{ __('title') }}</label>
+                        <label for="title">{{ __('Title') }}</label>
                         <input type="text" class="form-control" id="title" placeholder="{{ __('title') }}" name="title" value="{{ old('title', $recipe->title) }}" />
                     </div>
                     <div class="form-group">
-                        <label for="prep">{{ __('prep') }}</label>
+                        <label for="prep">{{ __('Prep') }}</label>
                         <input type="text" class="form-control" id="prep" placeholder="{{ __('prep') }}" name="prep" value="{{ old('prep', $recipe->prep) }}" />
                     </div>
                     <div class="form-group">
-                        <label for="cook">{{ __('cook') }}</label>
+                        <label for="cook">{{ __('Cook') }}</label>
                         <input type="text" class="form-control" id="cook" placeholder="{{ __('cook') }}" name="cook" value="{{ old('cook', $recipe->cook) }}" />
                     </div>
                     <div class="form-group">
-                        <label for="level">{{ __('level') }}</label>
+                        <label for="level">{{ __('Level') }}</label>
                         <select name="level" id="level" class="form-control" required>
                             <option {{ $recipe->level == 'For Beginner' ? 'selected' : null }} value="For Beginner">For Beginner</option>
                             <option {{ $recipe->level == 'For Intermediate' ? 'selected' : null }} value="For Intermadiate">For Intermediate</option>
@@ -94,8 +94,8 @@
                 <form action="{{ route('admin.recipes.galleries.store', [$recipe]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
-                        <label for="path">{{ __('path') }}</label>
-                        <input type="file" class="form-control" id="path" placeholder="{{ __('path') }}" name="path" value="{{ old('path') }}" />
+                        <label for="path">{{ __('Image') }}</label>
+                        <input type="file" class="form-control" id="path" placeholder="{{ __('Image') }}" name="path" value="{{ old('path') }}" />
                     </div>
                     <button type="submit" class="btn btn-success">{{ __('Save')}}</button>
                 </form>
@@ -112,7 +112,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>{{ __('Todo') }}</th>
+                                <th>{{ __('To-do') }}</th>
                                 <th>{{ __('Action') }}</th>
                             </tr>
                         </thead>
@@ -154,8 +154,8 @@
                 <form action="{{ route('admin.recipes.todos.store', [$recipe]) }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="todo">{{ __('todo') }}</label>
-                        <input type="text" class="form-control" id="todo" placeholder="{{ __('todo') }}" name="todo" value="{{ old('todo') }}" />
+                        <label for="todo">{{ __('To-do') }}</label>
+                        <input type="text" class="form-control" id="todo" placeholder="{{ __('To-do') }}" name="todo" value="{{ old('todo') }}" />
                     </div>
                     <button type="submit" class="btn btn-success">{{ __('Save')}}</button>
                 </form>
@@ -172,7 +172,7 @@
 
                                 </th>
                                 <th>No</th>
-                                <th>{{ __('Title') }}</th>
+                                <th>{{ __('Step') }}</th>
                                 <th>{{ __('Action') }}</th>
                             </tr>
                         </thead>
@@ -214,8 +214,8 @@
                 <form action="{{ route('admin.recipes.ingredients.store', [$recipe]) }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">{{ __('title') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('title') }}" name="title" value="{{ old('title') }}" />
+                        <label for="title">{{ __('Step') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Step') }}" name="title" value="{{ old('title') }}" />
                     </div>
                     <button type="submit" class="btn btn-success">{{ __('Save')}}</button>
                 </form>
