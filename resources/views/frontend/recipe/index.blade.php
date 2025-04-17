@@ -10,7 +10,7 @@
         <div class="row h-100 align-items-center">
           <div class="col-12">
             <div class="breadcumb-text text-center">
-              <h2>The best Recipes</h2>
+              <h2>The Best Recipes</h2>
             </div>
           </div>
         </div>

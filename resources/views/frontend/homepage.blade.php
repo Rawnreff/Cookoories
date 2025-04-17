@@ -46,7 +46,7 @@
         <div class="row mt-5">
           <div class="col-12">
             <div class="section-heading">
-              <h3>The best Receipies</h3>
+              <h3>The Best Recipes</h3>
             </div>
           </div>
         </div>
@@ -80,7 +80,7 @@
           <div class="col-12">
             <!-- Cta Content -->
             <div class="cta-content text-center">
-              <h2>Gluten Free Receipies</h2>
+              <h2>Gluten Free Recipes</h2>
               <p>
                 Fusce nec ante vitae lacus aliquet vulputate. Donec scelerisque
                 accumsan molestie. Vestibulum ante ipsum primis in faucibus orci

@@ -135,7 +135,7 @@
 
                   <!-- Newsletter Form -->
                   <div class="search-btn">
-                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <i name="search" class="fa fa-search" aria-hidden="true"></i>
                   </div>
                 </div>
                 <!-- Nav End -->
@@ -167,7 +167,7 @@
             </div>
             <!-- Footer Logo -->
             <div class="footer-logo">
-              <a href="index.html"
+              <a href="#"
                 ><img style="width: 300px;" src="{{ asset('frontend/img/core-img/logo-cookoories.png') }}" alt=""
               /></a>
             </div>

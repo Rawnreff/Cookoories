@@ -60,11 +60,11 @@
                   <input
                     type="checkbox"
                     class="custom-control-input"
-                    id="customCheck1"
+                    id="customCheck{{ $loop->index }}"
                   />
-                  <label class="custom-control-label" for="customCheck1"
-                    >{{ $ingredient->title }}</label
-                  >
+                  <label class="custom-control-label" for="customCheck{{ $loop->index }}">
+                    {{ $ingredient->title }}
+                  </label>
                 </div>
                 @endforeach
               </div>
