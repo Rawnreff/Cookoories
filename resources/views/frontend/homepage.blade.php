@@ -56,7 +56,9 @@
           @foreach($recipes as $recipe)
           <div class="col-12 col-sm-6 col-lg-4">
             <div class="single-best-receipe-area mb-30">
-              <img src="{{  asset("storage/" . $recipe->galleries()->first()->path) }}" alt="" />
+              <a href="{{ route('recipe.show', $recipe->slug) }}">
+                <img src="{{  asset("storage/" . $recipe->galleries()->first()->path) }}" alt="" />
+              </a>
               <div class="receipe-content">
                 <a href="{{ route('recipe.show', $recipe->slug) }}">
                   <h5>{{ $recipe->title }}</h5>
@@ -108,7 +110,9 @@
             <div class="single-small-receipe-area d-flex">
               <!-- Receipe Thumb -->
               <div class="receipe-thumb">
-                <img src="{{  asset("storage/" . $post->banner) }}" alt="" />
+                <a href="{{ route('blog.show', $post->slug) }}">
+                  <img src="{{  asset("storage/" . $post->banner) }}" alt="" />
+                </a>
               </div>
               <!-- Receipe Content -->
               <div class="receipe-content" style="margin-top: 0.75rem">
