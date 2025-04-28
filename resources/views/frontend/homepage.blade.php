@@ -14,7 +14,7 @@
             <div class="row h-100 align-items-center">
               <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                 <div
-                  class="hero-slides-content"
+                  class="hero-slides-content"   
                   data-animation="fadeInUp"
                   data-delay="100ms"
                 >
@@ -22,7 +22,7 @@
                     {{ $latest_recipe->title }}
                   </h2>
                   <a
-                    href="{{ route('recipe.show', $latest_recipe->slug) }}"
+                    href="{{ route('recipe.show',    $latest_recipe->slug) }}"
                     class="btn mt-5 delicious-btn"
                     data-animation="fadeInUp"
                     data-delay="1000ms"
@@ -37,7 +37,7 @@
 
         <!-- Single Hero Slide -->
       </div>
-    </section>
+</section>
     <!-- ##### Hero Area End ##### -->
 
     <!-- ##### Best Receipe Area Start ##### -->

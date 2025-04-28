@@ -214,8 +214,8 @@
                 <form action="{{ route('admin.recipes.ingredients.store', [$recipe]) }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <label for="title">{{ __('Step') }}</label>
-                        <input type="text" class="form-control" id="title" placeholder="{{ __('Step') }}" name="title" value="{{ old('title') }}" />
+                        <label for="title">{{ __('Ingredients') }}</label>
+                        <input type="text" class="form-control" id="title" placeholder="{{ __('Ingredients') }}" name="title" value="{{ old('title') }}" />
                     </div>
                     <button type="submit" class="btn btn-success">{{ __('Save')}}</button>
                 </form>
