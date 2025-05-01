@@ -1031,39 +1031,92 @@ textarea:focus {
     .receipe-post-search .col-12 {
       margin-bottom: 15px; } }
 
+      
+      
+    
+/* === RECEIPE SLIDER CUSTOMIZATION === */
 .receipe-slider {
   position: relative;
-  z-index: 1; }
+  z-index: 1;
+  border-radius: 30px;
+  overflow: hidden; /* penting supaya gambar & konten ngikutin radius */
+}
+
+/* Atur gambar di dalam slider */
+.receipe-slider img {
+  width: 100%;
+  height: auto;
+  max-height: 400px; /* sesuaikan kalau mau beda */
+  object-fit: cover; /* biar gambar rapi */
+  border-radius: 30px; /* supaya gambar ikutin radius */
+}
+
+/* Customized Next & Prev Buttons */
+.receipe-slider .owl-prev,
+.receipe-slider .owl-next {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  top: 50%;
+  margin-top: -20px;
+  left: 2%;
+  position: absolute;
+  z-index: 10;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0;
+  visibility: hidden;
+  border-bottom: 3px solid #1c8314;
+  transition: all 0.5s ease;
+}
+
+.receipe-slider .owl-next {
+  left: auto;
+  right: 2%;
+}
+
+.receipe-slider:hover .owl-prev,
+.receipe-slider:hover .owl-next {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dots styling */
+.receipe-slider .owl-dots {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+  justify-content: center;
+  z-index: 10;
+}
+
+.receipe-slider .owl-dots .owl-dot {
+  width: 10px;
+  height: 10px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 5px;
+  opacity: 0.4;
+  transition: all 0.3s;
+}
+
+.receipe-slider .owl-dots .owl-dot.active {
+  background: #40ba37;
+  opacity: 1;
+}
+
+/* Responsive kecil */
+@media only screen and (max-width: 767px) {
   .receipe-slider .owl-prev,
   .receipe-slider .owl-next {
-    background-color: transparent;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    color: #ffffff;
-    top: 50%;
-    margin-top: -20px;
-    left: 4%;
-    position: absolute;
-    z-index: 10;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 600;
-    opacity: 0;
-    visibility: hidden;
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    border-bottom: 3px solid #1c8314; }
-    @media only screen and (max-width: 767px) {
-      .receipe-slider .owl-prev,
-      .receipe-slider .owl-next {
-        font-size: 14px; } }
-  .receipe-slider .owl-next {
-    left: auto;
-    right: 4%; }
-  .receipe-slider:hover .owl-prev, .receipe-slider:hover .owl-next {
-    opacity: 1;
-    visibility: visible; }
+    font-size: 12px;
+  }
+}
+
 
 .receipe-headline span {
   font-size: 14px;
