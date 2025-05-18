@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,17 +8,28 @@ class Recipe extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id'];
+    protected $fillable = [
+        'title',
+        'slug',
+        'prep',
+        'cook',
+        'level',
+    ];
 
-    public function galleries() {
+    protected $with = ['galleries', 'todos', 'ingredients'];
+
+    public function galleries()
+    {
         return $this->hasMany(Gallery::class);
     }
 
-    public function todos() {
+    public function todos()
+    {
         return $this->hasMany(Todo::class);
     }
 
-    public function ingredients() {
+    public function ingredients()
+    {
         return $this->hasMany(Ingredient::class);
     }
 }
